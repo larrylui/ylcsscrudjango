@@ -1,0 +1,12 @@
+{
+  "name": "crush",
+  "description": "Strapi Heroku 1 click deploy button",
+  "keywords": [
+    "strapi",
+    "heroku"
+  ],
+  "repository": "https://github.com/larrylui/web-secretcrush",
+  "addons": [
+    "heroku-postgresql:mini"
+  ],
+}

@@ -1,0 +1,16 @@
+runtime: python310  # 更改为适合您项目的 Python 版本，如 python38、python39 等。
+
+entrypoint: gunicorn -b :$PORT webproject.wsgi  # 将 your_project_name 更改为您的 Django 项目名称。
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: "webproject.settings"  # 将 your_project_name 更改为您的 Django 项目名称。
+  SECRET_KEY: "django-insecure-z55#xg2ys8_o+^9_d^l^#y6vy%kd8=dmbl@ejcfd#r8#$d7#-*"  # 更改为您的 Django 项目的 SECRET_KEY。
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 5
+
+resources:
+  cpu: 1
+  memory_gb: 1
+  disk_size_gb: 10
